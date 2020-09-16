@@ -21,7 +21,6 @@ const App = ()=>{
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true)
 
-  console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY))
 
     const startTrivia = async ()=> {
       setLoading(true);
@@ -52,11 +51,17 @@ const App = ()=>{
 return(
     <div className='App'>
         <h1>REACT Typescript Quiz</h1>
+        {gameOver || userAnswers.length == TOTAL_QUESTIONS ? (
         <button className="start" onClick={startTrivia}>
         Start
         </button>
-        <p className="score">Score:</p>
-        <p>Loading Questions .... </p>
+        ): null}
+
+          {/* if not game over, show score, otherwise null */}
+        {!gameOver ? <p className="score">Score:</p> : null}
+        {/* if loading then display */}
+
+        {loading && <p>Loading Questions .... </p>}
         {/* <QuestionCard 
         questionNr={number +1}
         totalQuestions={TOTAL_QUESTIONS}
