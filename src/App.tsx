@@ -7,7 +7,7 @@ import {QuestionState} from './API'
 
 import {Difficulty} from './API'
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -85,7 +85,7 @@ return(
         ): null}
 
           {/* if not game over, show score, otherwise null */}
-        {!gameOver ? <p className="score">Score:</p> : null}
+        {!gameOver ? <p className="score">Score: {score}</p> : null}
         
         {/* if loading then display */}
         {loading && <p>Loading Questions .... </p>}
