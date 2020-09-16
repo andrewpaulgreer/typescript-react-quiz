@@ -10,8 +10,9 @@ box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
 text-align: center;
 
 p{
-    font-size: 1rem;
+    font-size: 1.8rem;
 }
+
 `;
 
 type ButtonWrapperProps = {
@@ -24,14 +25,15 @@ transition: all 0.3 ease;
 
 :hover {
     opacity: 0.8;
+    
 }
 
 button {
     cursor: pointer;
     user-select: none;
-    font-size: 0.8rem;
-    width: 10px;
-    height: 40px;
+    font-size: 1.3rem;
+    width: 300px;
+    height: 50px;
     margin: 5px 0;
     background: ${({correct, userClicked}) => 
     correct
@@ -40,5 +42,9 @@ button {
     ?'linear-gradient(90deg, #ff5656, #c16868)'
     :'linear-gradient(90deg, #56ccff, #6eafb4)'};
 border: 3px solid #fff;
+box-shadow: 1px 2px 0px rgba(0,0,0,0.1);
+border-radius: 10px;
+color: #fff;
+text-shadow: opx 1px 0px rgba(0,0,0,0.25);
 }
 `

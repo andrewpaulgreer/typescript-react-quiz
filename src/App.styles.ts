@@ -33,6 +33,8 @@ align-items: center;
 }
 
 .score {
+    justify-content: center;
+    align-items: center;
     color: #fff;
     font-size: 2rem;
     margin: 0;
@@ -41,14 +43,14 @@ align-items: center;
 h1{
 font-family: Kumbh Inline;
 background-image: linear-gradient(180deg, #fff, #87f1ff);
-background-size: 100%,;
+background-size: 100%;
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 -moz-background-clip: text;
 -mox-text-fill-color: transparent;
 filter: drop-shadow(2px 2px #0085a3)
-font-size: 70px;
+font-size: 100px;
 font-weight: 400;
 text-allign: center;
 margin: 30px;
@@ -60,13 +62,19 @@ margin: 30px;
     border: 2px solid #d38558;
     box-shadow: 0px 5px 10px reba(0,0,0,0.25);
     border-radius: 10px;
-    height: 40px;
+    height: 100px;
     margin: 20px 0;
     padding: 0 40px;
 }
 
 .start{
-    max-width: 200px
+    width: 500px;
+    height: 100px;
+    font-size: 3rem;
 }
-
+.next{
+ 
+    width: 600px;
+    height: 100px;  
+}
 `
