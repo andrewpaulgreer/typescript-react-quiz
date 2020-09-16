@@ -7,6 +7,10 @@ import {QuestionState} from './API'
 
 import {Difficulty} from './API'
 
+//styles
+import {GlobalStyle} from './App.styles'
+import {Wrapper} from './App.styles'
+
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -76,6 +80,9 @@ const App = ()=>{
    }
 
 return(
+  <>
+  <GlobalStyle />
+  <Wrapper>
     <div className='App'>
         <h1>REACT Typescript Quiz</h1>
         {gameOver || userAnswers.length == TOTAL_QUESTIONS ? (
@@ -109,6 +116,8 @@ return(
         </button>
          ): null }
     </div>
+    </Wrapper>
+    </>
 )
    
 }
