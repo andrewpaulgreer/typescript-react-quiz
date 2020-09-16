@@ -3,7 +3,9 @@ import QuestionCard from './components/QuestionCard'
 import {fetchQuizQuestions} from './API'
 
 //types
-import {QuestionState, Difficulty} from './API'
+import {QuestionState} from './API'
+
+import {Difficulty} from './API'
 
 type AnswerObject = {
   question: string;
@@ -61,6 +63,15 @@ const App = ()=>{
    }
 
    const nextQuestion = ()=> {
+     //move onto next q if not last q
+     const nextQuestion = number +1
+
+     if (nextQuestion === TOTAL_QUESTIONS){
+       setGameOver(true);
+
+     } else {
+       setNumber(nextQuestion)
+     }
 
    }
 
