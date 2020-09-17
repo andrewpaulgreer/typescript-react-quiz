@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, ChangeEvent, FormEvent} from 'react'
 import QuestionCard from './components/QuestionCard'
 import {fetchQuizQuestions} from './API'
 
@@ -10,13 +10,31 @@ import {Difficulty} from './API'
 //styles
 import {GlobalStyle} from './App.styles'
 import {Wrapper} from './App.styles'
+import { InputForm } from './components/InputForm'
+import { ResultsList } from './components/Results'
 
 export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
   correctAnswer: string;
+  
 }
+
+type Input = {
+  text: string
+}
+
+interface InitialList {
+  input: Input;
+}
+
+const inputInput: Array<Input> =
+  [{text: "AB"}]
+
+// type InputObject = {
+//   input: string;
+// }
 const TOTAL_QUESTIONS = 10;
 
 const App = ()=>{
@@ -26,7 +44,29 @@ const App = ()=>{
   const [userAnswers, setUserAnswers]= useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true)
+  const [inputs, setInputs] = useState(inputInput)
+  // const [initialInput, setInitialInput] = useState("");
+  const renderInput = () => {
+    const newInput = inputs.map(input => {
+      return {...input}
+    });
+    setInputs(newInput)
+  }
 
+  const addInput: AddInput = newInput => {
+    setInputs([...inputs, {text: newInput}])
+  }
+  // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   setInitialInput(e.target.value)
+  // }
+
+  // const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+  //   e.preventDefault()
+  // }
+
+  // const addInitials = newInput => {
+    
+  // }
 
     const startTrivia = async ()=> {
       setLoading(true);
@@ -45,6 +85,8 @@ const App = ()=>{
      
 
    }
+
+
 
    const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!gameOver){
@@ -89,8 +131,12 @@ return(
         <button className="start" onClick={startTrivia}>
         Start
         </button>
+           
         ): null}
+ { userAnswers.length == TOTAL_QUESTIONS ? (
+   <InputForm  addInput={addInput} />
 
+    ): null}
           {/* if not game over, show score, otherwise null */}
         {!gameOver ? <p className="score">Score: {score}</p> : null}
         
@@ -115,6 +161,7 @@ return(
           Next Question
         </button>
          ): null }
+      <ResultsList input={inputs[0]} Score={score}/>
     </div>
     </Wrapper>
     </>

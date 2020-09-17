@@ -56,7 +56,7 @@ text-allign: center;
 margin: 30px;
 }
 
-.start, .next {
+.start, .next, .submit-button {
     cursor: pointer;
     background: linear-gradient(180deg, #fff, #87f1ff);
     border: 2px solid #d38558;
@@ -73,6 +73,12 @@ margin: 30px;
     font-size: 3rem;
 }
 .next{
+ 
+    width: 600px;
+    height: 100px;  
+}
+
+.submit-button{
  
     width: 600px;
     height: 100px;  
