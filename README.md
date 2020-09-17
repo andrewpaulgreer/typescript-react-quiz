@@ -1,4 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Typescript and React Quiz
+
+## Description:
+This project was made using creat-react-app with typscript. It was insipred by the free code camp tutorial on how to use purely typescript and JSX or TSX to dynamically render dom elements. Typescript is super fun to work with since it diasallows developers to run code that may have type related issues. This makes the development process a bit faster since I wasnt spending a ton of time tracking down runtime errors. 
+
+
+### media
+
+## Start Quiz Screen
+![Getting Started](./public/start.png)
+
+## After start is pressed
+![Getting Started](./public/question.png)
+
+## Right answer displayed
+![Getting Started](./public/right.png)
+
+## Wrong answer displayed
+![Getting Started](./public/wrong.png)
+
+## End of quiz
+![Getting Started](./public/end.png)
 
 ## Available Scripts
 
