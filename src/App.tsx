@@ -11,7 +11,8 @@ import {Difficulty} from './API'
 import {GlobalStyle} from './App.styles'
 import {Wrapper} from './App.styles'
 import { InputForm } from './components/InputForm'
-import { ResultsList } from './components/Results'
+
+import {InitialList} from './components/InitialList'
 
 export type AnswerObject = {
   question: string;
@@ -30,7 +31,7 @@ interface InitialList {
 }
 
 const inputInput: Array<Input> =
-  [{text: "AB"}]
+  [{text: ""}]
 
 // type InputObject = {
 //   input: string;
@@ -161,7 +162,8 @@ return(
           Next Question
         </button>
          ): null }
-      <ResultsList input={inputs[0]} Score={score}/>
+      {/* <ResultsList input={inputs[0]} Score={score}/> */}
+      <InitialList inputs={inputs} Score={score} />
     </div>
     </Wrapper>
     </>

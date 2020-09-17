@@ -4,3 +4,4 @@ type Input = {
     text: string
   }
 
+type RenderInput = (selectedInput: Input) => void
