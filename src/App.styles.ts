@@ -78,9 +78,5 @@ margin: 30px;
     height: 100px;  
 }
 
-.submit-button{
- 
-    width: 600px;
-    height: 100px;  
-}
+
 `

@@ -20,7 +20,7 @@ export const InputForm: React.FC<AddInputProps> = ({addInput}) => {
             <div className="input-group">
               <label id="initial-input" style={{marginBottom: '50px', fontSize: "40px"}}>Initials:</label>
               <input type="text" onChange={handleChange} value={newInput} id="inputInitials" className="form-control" style={{marginRight: '30px', marginLeft: '30px', height: "50px", width: "200px"}} aria-describedby="passwordHelpInline" placeholder="AB" />
-              <button type="submit" onClick={handleSubmit} className="submit-button" style={{height: "75px", width: "100px", marginTop: "10px", fontSize: "20px", justifyContent: 'center'}}>Submit your results</button>
+              <button type="submit" onClick={handleSubmit} className="submit-button" style={{height: "75px", width: "100px", marginTop: "10px",  fontSize: "1rem"}}>Submit</button>
             </div>
           </form>
     )
