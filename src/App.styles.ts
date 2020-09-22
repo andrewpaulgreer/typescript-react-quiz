@@ -78,5 +78,13 @@ margin: 30px;
     height: 100px;  
 }
 
-
+.leaderboard{
+    max-width: 1100px;
+backgorund: #ebfeff;
+border-radius: 10px;
+border: 2px solid white;
+padding: 20px;
+box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+text-align: center;
+}
 `
